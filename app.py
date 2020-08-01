@@ -18,7 +18,7 @@ def hello():
 
 @app.route("/get_prediction", methods=['POST','OPTIONS'])
 @cross_origin()
-def create_task():
+def get_prediction():
     if not request.json:
         abort(400)
     df = pd.DataFrame(request.json, index=[0])
